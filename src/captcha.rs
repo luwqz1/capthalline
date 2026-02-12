@@ -116,7 +116,7 @@ impl CaptchaGenerator {
 
         Ok(CaptchaData {
             correct_emoji,
-            image: PyBytes::new_bound(py, &buf).into(),
+            image: PyBytes::new(py, &buf).into(),
             image_emojis,
             keyboard_emojis,
         })
